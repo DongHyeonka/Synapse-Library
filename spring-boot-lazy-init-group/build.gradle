@@ -8,9 +8,6 @@ plugins {
 }
 
 allprojects {
-	group = 'com.synapse.lazy-init'
-    version = '1.0.0-SNAPSHOT'
-    
     ext {
         springBootVersion = '3.5.4'
     }
