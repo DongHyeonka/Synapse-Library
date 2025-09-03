@@ -35,7 +35,7 @@ publishing {
 	repositories {
         maven {
             name = "GithubPackages"
-            url = "https://maven.pkg.github.com/DongHyeonKa/synapse-library"
+            url = "https://maven.pkg.github.com/DongHyeonKa/Synapse-Library"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_LAZY_TOKEN")
