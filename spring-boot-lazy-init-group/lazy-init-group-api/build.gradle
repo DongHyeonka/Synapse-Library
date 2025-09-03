@@ -14,12 +14,11 @@ dependencies {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'lazy-init-group-api' // 아티팩트 ID 명시
+            artifactId = 'lazy-init-group-api'
             from components.java
         }
     }
     repositories {
-        // starter와 동일한 저장소 설정...
         maven {
             name = "GithubPackages"
             url = "https://maven.pkg.github.com/DongHyeonKa/spring-boot-lazy-init-group"
