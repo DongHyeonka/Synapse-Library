@@ -2,3 +2,4 @@ rootProject.name = 'synapse-library'
 
 include ('lazy-init-group-api')
 include ('lazy-init-group-spring-boot-starter')
+include ('synapse-domain-model')

@@ -21,7 +21,7 @@ publishing {
     repositories {
         maven {
             name = "GithubPackages"
-            url = "https://maven.pkg.github.com/DongHyeonKa/spring-boot-lazy-init-group"
+            url = "https://maven.pkg.github.com/DongHyeonKa/synapse-library"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_LAZY_TOKEN")
