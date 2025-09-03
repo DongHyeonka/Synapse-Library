@@ -1,4 +1,4 @@
-name: Publish Lazy Init Group Spring Boot Starter Package
+name: Publish Synapse Library Package
 
 on:
   push:
@@ -29,19 +29,19 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('spring-boot-lazy-init-group/**/*.gradle*', 'spring-boot-lazy-init-group/**/gradle-wrapper.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('synapse-library/**/*.gradle*', 'synapse-library/**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
       - name: gradlew 실행 권한 부여
-        working-directory: spring-boot-lazy-init-group
+        working-directory: synapse-library
         run: chmod +x ./gradlew
       
       - name: 태그 이름에서 버전 정보 추출 (e.g. v1.0.0 -> 1.0.0)
         run: echo "VERSION_TAG=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
       
       - name: Gradle로 GitHub Packages에 배포
-        working-directory: spring-boot-lazy-init-group
+        working-directory: synapse-library
         run: ./gradlew publish -Pversion=${{ env.VERSION_TAG }}
         env:
           GITHUB_ACTOR: ${{ github.actor }}
