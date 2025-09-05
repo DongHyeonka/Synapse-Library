@@ -6,12 +6,11 @@ plugins {
 group = 'com.github.DongHyeonKa'
 version = project.hasProperty('version') ? project.property('version') : '1.0.0-SNAPSHOT'
 
-
 dependencies {
     // Auth0
 	implementation 'com.auth0:java-jwt:4.4.0'
 	// Synapse-Core
-    api project(':synapse-core')
+    implementation project(':synapse-core')
 }
 
 publishing {

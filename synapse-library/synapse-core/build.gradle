@@ -1,21 +1,14 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'io.spring.dependency-management'
 }
 
 group = 'com.github.DongHyeonKa'
 version = project.hasProperty('version') ? project.property('version') : '1.0.0-SNAPSHOT'
 
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
-    }
-}
-
 dependencies {
     // Spring Boot Starter
-    api 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter'
 }
 
 publishing {
